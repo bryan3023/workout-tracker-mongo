@@ -1,0 +1,79 @@
+body {
+  margin: 0px;
+  font-size: 16px;
+}
+
+ul, li {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul { margin-bottom: 0px; }
+
+div form {
+  margin: 10px;
+}
+
+.list-area {
+  border: 1px solid #282828;
+  position: relative;
+  padding: 0px 20px auto 20px;
+}
+
+h2, h3 {
+  left: 0;
+  background-color: #282828;
+  color: #fff;
+  padding: 8px;
+  font-size: 1rem;
+  line-height: 1rem;
+  margin: 0;
+  height: 34px;
+}
+
+li.placeholder {
+  color: grey
+}
+
+div.activity-pane {
+  display: none;
+}
+
+#workouts-list ul li,
+#activities-list ul li {
+  font-size: .9rem;
+  line-height: 1.1rem;
+  margin-bottom: 20px;
+}
+
+#workouts-list ul li,
+#activities-list ul li {
+  margin: 0px;
+  padding: 12px;
+}
+
+#workouts-list ul li.selected {
+  background-color: #cdcdcd;
+}
+
+#activities-list ul li span,
+#workouts-list ul li span {
+  font-size: .8rem;
+  line-height: .85rem;
+  display: block;
+  font-weight: bold;
+}
+
+.error-alert {
+  display: none;
+}
+
+div.form-group {
+  margin-bottom: 1em;
+}
+
+@media (min-width: 768px) { 
+  h2 {
+    max-width: 50%;
+  }
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sequelize Fitness</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+  </head>
+
+  <body>
+    <div class="container mt-5">
+      <div class="row">
+
+        <!--
+          Workout pane, from where users can add a workout or click one to
+          view its activities.
+        -->
+        <div class="col-sm-4 mb-3">
+          <h2>Workouts</h2>
+          <div class="list-area">
+            <div id="workouts-list"><ul></ul></div>
+            <div id="add-workout-area">
+              <h3>Add a workout for today</h3>
+              <form id="add-workout">
+                <input name="day" type="hidden" />
+                <div class="input-group">
+                  <label for="name" class="sr-only">Add a workout for today</label>
+                  <input name="name" type="text" class="form-control" autocomplete="off" />
+                  <div class="input-group-append">
+                    <button name="submit" class="btn btn-primary btn-small" type="submit">Add</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+
+        <!--
+          Activities pane, which shows all activies for the current workout,
+          along with a form to add another.
+        -->
+        <div class="col-sm-8 activity-pane mb-3">
+          <h2 id="activity-header"></h2>
+          <div class="list-area">
+            <div id="activities-list"><ul></ul></div>
+
+            <div id="add-activity-area">
+              <h3>Add an activity</h3>
+              <div class="alert alert-warning error-alert" role="alert"></div>
+              <form id="add-activity" class="form-horizontal">
+                <input name="workoutId" type="hidden" />
+                <div class="form-group">
+                  <label for="exerciseId" class="sr-only">Choose an exercise</label>
+                  <select name="exerciseId" class="form-control">
+                    <option value="">Choose an exercise</option>
+                  </select>
+                </div>
+
+                <div class-="form-group form-row">
+                  <label for="duration" class="col-xs-4 col-form-label">Duration</label>
+                  <div class="col-xs-8">
+                    <input name="duration" class="form-control" type="text" autocomplete="off" />
+                  </div>
+                </div>
+
+                <div class-="form-group">
+                  <label for="weight">Weight</label>
+                  <input name="weight" class="form-control" type="text" autocomplete="off" />
+                </div>
+
+                <div class-="form-group">
+                  <label for="reps">Reps</label>
+                  <input name="reps" class="form-control" type="text" autocomplete="off" />
+                </div>
+
+                <div class-="form-group">
+                  <label for="sets">Sets</label>
+                  <input name="sets" class="form-control" type="text" autocomplete="off" />
+                </div>
+
+                <div class-="form-group">
+                  <label for="distance">Distance</label>
+                  <input name="distance" class="form-control" type="text" autocomplete="off" />
+                </div>
+
+                <div class-="form-group">
+                  <button name="submit" class="btn btn-primary" type="submit">Add</button>
+                </div>
+              </form>
+            </div> <!-- /#add-activity-area-->
+          </div>
+        </div> <!-- /col-sm-8 -->
+
+      </div> <!-- /row-->
+    </div> <!-- /container-->
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="/assets/js/app.js"></script>
+  </body>
+
+</html>
